@@ -1,0 +1,175 @@
+@use "./fonts.scss";
+
+:root {
+    --bold: "Roboto-Bold";
+    --reg: "Roboto-Regular";
+    --text: #808080;
+    --grey: #f0f0f0;
+    --blue: #4581b7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}   
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.nav {
+    padding: 50px 0 30px;
+
+    .menu, .close {
+        display: none;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__link {
+        font-family: var(--reg);
+        font-size: 18px;
+        color: var(--text);
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text);
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0%);
+            transition: 0.5s;
+        }
+
+        &:focus::after {
+            transform: scaleX(100%);
+        }
+    }
+}
+
+.intro__bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1110px;
+    width: 100%;
+    display: block;
+}
+
+.about {
+    &__box {
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__left {
+        padding: 50px 95px 50px 40px;
+        background-color: var(--grey);
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__right {
+        padding: 50px 24px 160px 40px;
+        background-color: var(--grey);
+    }
+
+    &__title {
+        font-family: var(--bold);
+        font-size: 20px;
+        color: var(--blue);
+    }
+
+    &__text {
+        font-family: var(--reg);
+        font-size: 16px;
+        line-height: 27px;
+        color: var(--text);
+        margin-top: 25px;
+
+        &_long {
+            max-width: 595px;
+            width: 100%;
+        }
+
+        &_short {
+            max-width: 286px;
+            width: 100%;
+        }
+    }
+
+    &__contact {
+        font-family: var(--reg);
+        font-size: 16px;
+        line-height: 27px;
+        color: var(--text);
+        margin: 50px 0;
+    }
+
+    &__email {
+        font-family: var(--reg);
+        font-size: 16px;
+        line-height: 27px;
+        color: var(--text);
+    }
+}
+
+.footer {
+    &__box {
+        background-color: var(--grey);
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__contact {
+        font-family: var(--reg);
+        font-size: 16px;
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+
+        a {
+            font-family: var(--bold);
+            font-size: 25px;
+            color: var(--text);
+        }
+    }
+}

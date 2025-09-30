@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+:root {
+  --bold: "Roboto-Bold";
+  --reg: "Roboto-Regular";
+  --text: #808080;
+  --grey: #f0f0f0;
+  --blue: #4581b7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.nav {
+  padding: 50px 0 30px;
+}
+.nav .menu, .nav .close {
+  display: none;
+}
+.nav__box {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  gap: 30px;
+}
+.nav__link {
+  font-family: var(--reg);
+  font-size: 18px;
+  color: var(--text);
+  position: relative;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text);
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0%);
+  transition: 0.5s;
+}
+.nav__link:focus::after {
+  transform: scaleX(100%);
+}
+
+.intro__bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1110px;
+  width: 100%;
+  display: block;
+}
+
+.about__box {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.about__left {
+  padding: 50px 95px 50px 40px;
+  background-color: var(--grey);
+}
+.about__right {
+  display: flex;
+  flex-direction: column;
+}
+.about__right {
+  padding: 50px 24px 160px 40px;
+  background-color: var(--grey);
+}
+.about__title {
+  font-family: var(--bold);
+  font-size: 20px;
+  color: var(--blue);
+}
+.about__text {
+  font-family: var(--reg);
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--text);
+  margin-top: 25px;
+}
+.about__text_long {
+  max-width: 595px;
+  width: 100%;
+}
+.about__text_short {
+  max-width: 286px;
+  width: 100%;
+}
+.about__contact {
+  font-family: var(--reg);
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--text);
+  margin: 50px 0;
+}
+.about__email {
+  font-family: var(--reg);
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--text);
+}
+
+.footer__box {
+  background-color: var(--grey);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__contact {
+  font-family: var(--reg);
+  font-size: 16px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.footer__contact a {
+  font-family: var(--bold);
+  font-size: 25px;
+  color: var(--text);
+}
+
+/*# sourceMappingURL=style.css.map */
